@@ -11,6 +11,14 @@
 		1382A5EF289D975600FAADE8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1382A5EE289D975600FAADE8 /* ContentView.swift */; };
 		1382A5F1289D975800FAADE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1382A5F0289D975800FAADE8 /* Assets.xcassets */; };
 		1382A5F4289D975800FAADE8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1382A5F3289D975800FAADE8 /* Preview Assets.xcassets */; };
+		1382A5FD289D983F00FAADE8 /* PieSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1382A5FC289D983F00FAADE8 /* PieSlice.swift */; };
+		1382A5FF289D985600FAADE8 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1382A5FE289D985600FAADE8 /* PieChart.swift */; };
+		1382A601289D987600FAADE8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1382A600289D987600FAADE8 /* HomeView.swift */; };
+		1382A603289D988500FAADE8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1382A602289D988500FAADE8 /* ProfileView.swift */; };
+		1382A605289D988F00FAADE8 /* AddFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1382A604289D988F00FAADE8 /* AddFoodView.swift */; };
+		1382A607289D989C00FAADE8 /* FoodLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1382A606289D989C00FAADE8 /* FoodLogView.swift */; };
+		1382A609289D98B100FAADE8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1382A608289D98B100FAADE8 /* LoginView.swift */; };
+		1382A60C289D98F900FAADE8 /* TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1382A60B289D98F900FAADE8 /* TimeFormatting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,14 @@
 		1382A5EE289D975600FAADE8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1382A5F0289D975800FAADE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1382A5F3289D975800FAADE8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1382A5FC289D983F00FAADE8 /* PieSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieSlice.swift; sourceTree = "<group>"; };
+		1382A5FE289D985600FAADE8 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
+		1382A600289D987600FAADE8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1382A602289D988500FAADE8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		1382A604289D988F00FAADE8 /* AddFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodView.swift; sourceTree = "<group>"; };
+		1382A606289D989C00FAADE8 /* FoodLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodLogView.swift; sourceTree = "<group>"; };
+		1382A608289D98B100FAADE8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1382A60B289D98F900FAADE8 /* TimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +67,9 @@
 		1382A5EB289D975600FAADE8 /* calorie-counter-ios */ = {
 			isa = PBXGroup;
 			children = (
+				1382A60A289D98E200FAADE8 /* Helpers */,
+				1382A5FB289D981E00FAADE8 /* SubViews */,
+				1382A5FA289D980800FAADE8 /* Views */,
 				1382A5EC289D975600FAADE8 /* calorie_counter_iosApp.swift */,
 				1382A5EE289D975600FAADE8 /* ContentView.swift */,
 				1382A5F0289D975800FAADE8 /* Assets.xcassets */,
@@ -65,6 +84,35 @@
 				1382A5F3289D975800FAADE8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1382A5FA289D980800FAADE8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1382A600289D987600FAADE8 /* HomeView.swift */,
+				1382A602289D988500FAADE8 /* ProfileView.swift */,
+				1382A604289D988F00FAADE8 /* AddFoodView.swift */,
+				1382A606289D989C00FAADE8 /* FoodLogView.swift */,
+				1382A608289D98B100FAADE8 /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1382A5FB289D981E00FAADE8 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				1382A5FC289D983F00FAADE8 /* PieSlice.swift */,
+				1382A5FE289D985600FAADE8 /* PieChart.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		1382A60A289D98E200FAADE8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1382A60B289D98F900FAADE8 /* TimeFormatting.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +185,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1382A5FD289D983F00FAADE8 /* PieSlice.swift in Sources */,
+				1382A607289D989C00FAADE8 /* FoodLogView.swift in Sources */,
+				1382A5FF289D985600FAADE8 /* PieChart.swift in Sources */,
+				1382A609289D98B100FAADE8 /* LoginView.swift in Sources */,
 				1382A5EF289D975600FAADE8 /* ContentView.swift in Sources */,
+				1382A60C289D98F900FAADE8 /* TimeFormatting.swift in Sources */,
+				1382A601289D987600FAADE8 /* HomeView.swift in Sources */,
+				1382A603289D988500FAADE8 /* ProfileView.swift in Sources */,
 				1382A5ED289D975600FAADE8 /* calorie_counter_iosApp.swift in Sources */,
+				1382A605289D988F00FAADE8 /* AddFoodView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
