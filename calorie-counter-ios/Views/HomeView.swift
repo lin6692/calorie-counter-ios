@@ -11,7 +11,6 @@ struct HomeView: View {
     
     @State var goal = 2000
     @State var current = 400
-    @State var remaining = 1600
     
     @State var testData = [0.3,0.7]
     @State var pieChartLabel = ["current", "remaining"]
@@ -41,11 +40,11 @@ struct HomeView: View {
                 
                 // Display Current Kcal Details
                 HStack {
-                    CalorieDisplay(number: $goal, desc: "Goal")
+                    CalorieDisplay(number: goal, desc: "Goal")
                     Text("-").fontWeight(.bold)
-                    CalorieDisplay(number: $current, desc: "Current")
+                    CalorieDisplay(number: totalCaloriesToday(), desc: "Current")
                     Text("=").fontWeight(.bold)
-                    CalorieDisplay(number: $remaining, desc: "Current")
+                    CalorieDisplay(number: getRemaining(), desc: "Remaining")
                 }
                 
                 // Pie chart to display the percentage
@@ -73,7 +72,12 @@ struct HomeView: View {
             .navigationBarTitle(Text("Home"), displayMode: .inline)
             
         }
-        
+    }
+    
+    private func getRemaining() -> Int {
+        var remaining:Int
+        remaining = goal - totalCaloriesToday()
+        return remaining
     }
 }
 
@@ -84,7 +88,7 @@ struct HomeView_Previews: PreviewProvider {
 }
 
 struct CalorieDisplay: View {
-    @Binding var number:Int
+    var number:Int
     var desc:String
     
     var body: some View {

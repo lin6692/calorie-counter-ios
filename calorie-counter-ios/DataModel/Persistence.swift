@@ -51,3 +51,25 @@ func saveFood(context:NSManagedObjectContext) {
         fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
     }
 }
+
+func getAllFoods() -> [FoodEntity] {
+    let fetchRequest: NSFetchRequest<FoodEntity> = FoodEntity.fetchRequest()
+    do {
+        return try PersistenceController().container.viewContext.fetch(fetchRequest)
+       } catch {
+           print("Failed to fetch movies: \(error)")
+           return []
+       }
+    
+}
+
+func totalCaloriesToday() -> Int {
+    var caloriesToday:Int = 0
+    var foods = getAllFoods()
+    for food in foods {
+        if Calendar.current.isDateInToday(food.date!) {
+            caloriesToday += Int(food.calorie)
+        }
+    }
+    return caloriesToday
+}
