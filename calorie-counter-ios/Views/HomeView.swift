@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct HomeView: View {
     
@@ -44,7 +45,7 @@ struct HomeView: View {
                 HStack {
                     CalorieDisplay(number: goal, desc: "Goal")
                     Text("-").fontWeight(.bold)
-                    CalorieDisplay(number: viewModel.totalCaloriesToday(), desc: "Current")
+                    CalorieDisplay(number: viewModel.calorieToday, desc: "Current")
                     Text("=").fontWeight(.bold)
                     CalorieDisplay(number: viewModel.getRemaining(goal: goal), desc: "Remaining")
                 }
@@ -73,7 +74,7 @@ struct HomeView: View {
             }
             .navigationBarTitle(Text("Home"), displayMode: .inline)
             
-        }
+         }.environmentObject(viewModel)
     }
 }
 

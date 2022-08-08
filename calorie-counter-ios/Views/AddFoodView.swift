@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddFoodView: View {
     
-    @StateObject var viewModel = FoodViewModel()
+    @EnvironmentObject var viewModel:FoodViewModel
     
     @State private var searchTerm = ""
     @State private var measureIndex = 0

@@ -12,6 +12,7 @@ class FoodViewModel: ObservableObject {
     
     let container: NSPersistentContainer
     @Published var foods:[FoodEntity] = []
+    @Published var calorieToday:Int  = 0
     
     init() {
         container = NSPersistentContainer(name:"calorie-counter-ios")
@@ -29,6 +30,7 @@ class FoodViewModel: ObservableObject {
         fetchRequest.sortDescriptors = [sort]
         do {
             foods = try container.viewContext.fetch(fetchRequest)
+            calorieToday = totalCaloriesToday()
            } catch {
                print("Failed to fetch movies: \(error)")
            }
@@ -62,6 +64,7 @@ class FoodViewModel: ObservableObject {
     
     func totalCaloriesToday() -> Int {
         var caloriesToday:Int = 0
+//        getAllFoods()
         for food in foods {
             if Calendar.current.isDateInToday(food.date!) {
                 caloriesToday += Int(food.calorie)
@@ -72,7 +75,7 @@ class FoodViewModel: ObservableObject {
     
     func getRemaining(goal:Int) -> Int {
         var remaining:Int
-        remaining = goal - self.totalCaloriesToday()
+        remaining = goal - self.calorieToday
         return remaining
     }
 }

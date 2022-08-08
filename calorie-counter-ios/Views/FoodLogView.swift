@@ -10,11 +10,11 @@ import CoreData
 
 struct FoodLogView: View {
     
-    @StateObject var viewModel = FoodViewModel()
+    @EnvironmentObject var viewModel:FoodViewModel
     
     var body: some View {
         VStack{
-            Text("\(viewModel.totalCaloriesToday()) Kcal (Today)")
+            Text("\(viewModel.calorieToday) Kcal (Today)")
                 .foregroundColor(.gray)
                 .padding(.horizontal)
             List {
