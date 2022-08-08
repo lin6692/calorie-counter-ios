@@ -19,6 +19,7 @@
 		1382A607289D989C00FAADE8 /* FoodLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1382A606289D989C00FAADE8 /* FoodLogView.swift */; };
 		1382A609289D98B100FAADE8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1382A608289D98B100FAADE8 /* LoginView.swift */; };
 		1382A60C289D98F900FAADE8 /* TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1382A60B289D98F900FAADE8 /* TimeFormatting.swift */; };
+		1382A60E28A0A32A00FAADE8 /* ButtonTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1382A60D28A0A32A00FAADE8 /* ButtonTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		1382A606289D989C00FAADE8 /* FoodLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodLogView.swift; sourceTree = "<group>"; };
 		1382A608289D98B100FAADE8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1382A60B289D98F900FAADE8 /* TimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatting.swift; sourceTree = "<group>"; };
+		1382A60D28A0A32A00FAADE8 /* ButtonTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				1382A5FC289D983F00FAADE8 /* PieSlice.swift */,
 				1382A5FE289D985600FAADE8 /* PieChart.swift */,
+				1382A60D28A0A32A00FAADE8 /* ButtonTextView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				1382A601289D987600FAADE8 /* HomeView.swift in Sources */,
 				1382A603289D988500FAADE8 /* ProfileView.swift in Sources */,
 				1382A5ED289D975600FAADE8 /* calorie_counter_iosApp.swift in Sources */,
+				1382A60E28A0A32A00FAADE8 /* ButtonTextView.swift in Sources */,
 				1382A605289D988F00FAADE8 /* AddFoodView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
