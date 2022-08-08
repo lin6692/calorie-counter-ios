@@ -81,8 +81,9 @@ struct ProfileView: View {
                         Button {
                             if age == "" || weight == "" || height == "" {
                                 showingAlert.toggle()
+                            } else {
+                                calulcatedCal = String(calculateCalories(gender: genderArray[genderIndex], age:  Int(age) ?? 0, weight: Int(weight) ?? 0, height: Int(height) ?? 0))
                             }
-                            calulcatedCal = String(calculateCalories(gender: genderArray[genderIndex], age:  Int(age) ?? 0, weight: Int(weight) ?? 0, height: Int(height) ?? 0))
                         } label:{
                             ButtonTextView(label: "Get")
                         }
