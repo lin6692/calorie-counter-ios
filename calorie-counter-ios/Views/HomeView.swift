@@ -51,7 +51,7 @@ struct HomeView: View {
                 }
                 
                 // Pie chart to display the percentage
-                PieChart(data: $testData, labels: $pieChartLabel, colors: [.red, .yellow, .blue], borderColor: .white)
+                PieChart(data: viewModel.getProgress(goal:goal), labels: $pieChartLabel, colors: [.red, .yellow, .blue], borderColor: .white)
                     .padding(40)
                     .frame(height: 380)
                 

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PieChart: View {
-  @Binding var data: [Double]
+  var data: [Double]
   @Binding var labels: [String]
   
   private let colors: [Color]
@@ -16,8 +16,8 @@ struct PieChart: View {
   private let sliceOffset: Double = -.pi / 2
   
   
-  init(data: Binding<[Double]>, labels: Binding<[String]>, colors: [Color], borderColor: Color) {
-    self._data = data
+  init(data: [Double], labels: Binding<[String]>, colors: [Color], borderColor: Color) {
+    self.data = data
     self._labels = labels
     self.colors = colors
     self.borderColor = borderColor

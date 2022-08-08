@@ -78,4 +78,14 @@ class FoodViewModel: ObservableObject {
         remaining = goal - self.calorieToday
         return remaining
     }
+    
+    func getProgress(goal:Int) -> [Double] {
+        var current:Double
+        var remaining:Double
+        
+        current = Double(self.calorieToday)/Double(goal)
+        remaining = Double(self.getRemaining(goal:goal))/Double(goal)
+        
+        return [current, remaining]
+    }
 }
