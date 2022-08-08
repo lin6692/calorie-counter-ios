@@ -11,7 +11,7 @@ struct ButtonTextView: View {
     var label:String
     var body: some View {
             return Text(label)
-            .frame(width: 120, height: 30)
+            .frame(width: 100, height: 30)
             .background(Color.accentColor)
             .foregroundColor(.white)
             .font(.system(size:15, weight:.bold))
