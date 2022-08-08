@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct calorie_counter_iosApp: App {
+    let persistenceController = PersistenceController.shared
+    
     var body: some Scene {
         WindowGroup {
             HomeView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
