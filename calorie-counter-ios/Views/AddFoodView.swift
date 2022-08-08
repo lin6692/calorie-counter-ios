@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct AddFoodView: View {
-    @Environment(\.managedObjectContext) private var viewContext
+    
+    @StateObject var viewModel = FoodViewModel()
     
     @State private var searchTerm = ""
     @State private var measureIndex = 0
@@ -83,7 +84,8 @@ struct AddFoodView: View {
                     HStack {
                         Spacer()
                         Button {
-                            addFood(name:foodName, calorie: getTotalCalIntake())
+                            viewModel.addFood(name: foodName, calorie: getTotalCalIntake())
+//                            addFood(name:foodName, calorie: getTotalCalIntake())
                             clearInput()
                         } label: {
                             ButtonTextView(label: "Add")
@@ -95,14 +97,6 @@ struct AddFoodView: View {
                 
             }
         }
-    }
-    private func addFood(name:String, calorie:Int) {
-        let newFood = FoodEntity(context:viewContext)
-        newFood.id = UUID()
-        newFood.date = Date()
-        newFood.name = name
-        newFood.calorie = Int64(exactly: calorie)!
-        saveFood(context:viewContext)
     }
     
     // **************How to reset state and binding variable?

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @StateObject var viewModel = FoodViewModel()
+    
     @State var goal = 2000
     @State var current = 400
     
@@ -42,9 +44,9 @@ struct HomeView: View {
                 HStack {
                     CalorieDisplay(number: goal, desc: "Goal")
                     Text("-").fontWeight(.bold)
-                    CalorieDisplay(number: totalCaloriesToday(), desc: "Current")
+                    CalorieDisplay(number: viewModel.totalCaloriesToday(), desc: "Current")
                     Text("=").fontWeight(.bold)
-                    CalorieDisplay(number: getRemaining(), desc: "Remaining")
+                    CalorieDisplay(number: viewModel.getRemaining(goal: goal), desc: "Remaining")
                 }
                 
                 // Pie chart to display the percentage
@@ -72,12 +74,6 @@ struct HomeView: View {
             .navigationBarTitle(Text("Home"), displayMode: .inline)
             
         }
-    }
-    
-    private func getRemaining() -> Int {
-        var remaining:Int
-        remaining = goal - totalCaloriesToday()
-        return remaining
     }
 }
 

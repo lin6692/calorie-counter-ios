@@ -9,35 +9,25 @@ import SwiftUI
 import CoreData
 
 struct FoodLogView: View {
-    @Environment(\.managedObjectContext) private var viewContext
     
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \FoodEntity.date, ascending: false)],
-        animation: .default)
-        private var foods: FetchedResults<FoodEntity>
+    @StateObject var viewModel = FoodViewModel()
     
     var body: some View {
         VStack{
-            Text("\(totalCaloriesToday()) Kcal (Today)")
+            Text("\(viewModel.totalCaloriesToday()) Kcal (Today)")
                 .foregroundColor(.gray)
                 .padding(.horizontal)
             List {
-                ForEach(foods) { food in
-                    FoodEntryView(food:food)
+                ForEach(viewModel.foods) { food in
+                    FoodEntryView(food: food)
                 }
-                .onDelete(perform: deleteFood)
+                .onDelete(perform: viewModel.deleteFood)
             }
             .listStyle(PlainListStyle())
         }
         .navigationTitle("Calorie Log")
     }
     
-    private func deleteFood(offsets:IndexSet) {
-        withAnimation {
-            offsets.map{ foods[$0] }.forEach(viewContext.delete)
-            saveFood(context:viewContext)
-        }
-    }
 }
 
 struct FoodEntryView: View {
@@ -45,7 +35,7 @@ struct FoodEntryView: View {
     var body: some View {
         return HStack {
             VStack(alignment: .leading, spacing: 6) {
-                Text("\(food.name!)").bold()
+                Text(food.name!).bold()
                 Text("\(Int(food.calorie))  ") + Text("calories").foregroundColor(.red)
             }
             Spacer()
