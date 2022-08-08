@@ -20,6 +20,9 @@
 		1382A609289D98B100FAADE8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1382A608289D98B100FAADE8 /* LoginView.swift */; };
 		1382A60C289D98F900FAADE8 /* TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1382A60B289D98F900FAADE8 /* TimeFormatting.swift */; };
 		1382A60E28A0A32A00FAADE8 /* ButtonTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1382A60D28A0A32A00FAADE8 /* ButtonTextView.swift */; };
+		1382A61128A0B1E800FAADE8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1382A61028A0B1E800FAADE8 /* Persistence.swift */; };
+		1382A61428A0B70C00FAADE8 /* calorie-counter-ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1382A61228A0B70C00FAADE8 /* calorie-counter-ios.xcdatamodeld */; };
+		1382A61628A0BF4100FAADE8 /* FoodDetailAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1382A61528A0BF4100FAADE8 /* FoodDetailAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		1382A608289D98B100FAADE8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1382A60B289D98F900FAADE8 /* TimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatting.swift; sourceTree = "<group>"; };
 		1382A60D28A0A32A00FAADE8 /* ButtonTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTextView.swift; sourceTree = "<group>"; };
+		1382A61028A0B1E800FAADE8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		1382A61328A0B70C00FAADE8 /* calorie-counter-ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "calorie-counter-ios.xcdatamodel"; sourceTree = "<group>"; };
+		1382A61528A0BF4100FAADE8 /* FoodDetailAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,7 @@
 		1382A5EB289D975600FAADE8 /* calorie-counter-ios */ = {
 			isa = PBXGroup;
 			children = (
+				1382A60F28A0B1CA00FAADE8 /* DataModel */,
 				1382A60A289D98E200FAADE8 /* Helpers */,
 				1382A5FB289D981E00FAADE8 /* SubViews */,
 				1382A5FA289D980800FAADE8 /* Views */,
@@ -114,8 +121,18 @@
 			isa = PBXGroup;
 			children = (
 				1382A60B289D98F900FAADE8 /* TimeFormatting.swift */,
+				1382A61528A0BF4100FAADE8 /* FoodDetailAPI.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1382A60F28A0B1CA00FAADE8 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				1382A61028A0B1E800FAADE8 /* Persistence.swift */,
+				1382A61228A0B70C00FAADE8 /* calorie-counter-ios.xcdatamodeld */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,11 +209,14 @@
 				1382A607289D989C00FAADE8 /* FoodLogView.swift in Sources */,
 				1382A5FF289D985600FAADE8 /* PieChart.swift in Sources */,
 				1382A609289D98B100FAADE8 /* LoginView.swift in Sources */,
+				1382A61428A0B70C00FAADE8 /* calorie-counter-ios.xcdatamodeld in Sources */,
 				1382A5EF289D975600FAADE8 /* ContentView.swift in Sources */,
 				1382A60C289D98F900FAADE8 /* TimeFormatting.swift in Sources */,
+				1382A61628A0BF4100FAADE8 /* FoodDetailAPI.swift in Sources */,
 				1382A601289D987600FAADE8 /* HomeView.swift in Sources */,
 				1382A603289D988500FAADE8 /* ProfileView.swift in Sources */,
 				1382A5ED289D975600FAADE8 /* calorie_counter_iosApp.swift in Sources */,
+				1382A61128A0B1E800FAADE8 /* Persistence.swift in Sources */,
 				1382A60E28A0A32A00FAADE8 /* ButtonTextView.swift in Sources */,
 				1382A605289D988F00FAADE8 /* AddFoodView.swift in Sources */,
 			);
@@ -397,6 +417,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1382A61228A0B70C00FAADE8 /* calorie-counter-ios.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1382A61328A0B70C00FAADE8 /* calorie-counter-ios.xcdatamodel */,
+			);
+			currentVersion = 1382A61328A0B70C00FAADE8 /* calorie-counter-ios.xcdatamodel */;
+			path = "calorie-counter-ios.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1382A5E1289D975600FAADE8 /* Project object */;
 }
