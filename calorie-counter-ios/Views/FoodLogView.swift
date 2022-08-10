@@ -16,7 +16,7 @@ struct FoodLogView: View {
     
     var body: some View {
         VStack{
-            Text("\(viewModel.calorieToday) Kcal (Today)")
+            Text("\(viewModel.totalCaloriesToday(user:userDataManager.person)) Kcal (Today)")
                 .foregroundColor(.gray)
                 .padding(.horizontal)
             List {
@@ -29,9 +29,9 @@ struct FoodLogView: View {
             }
             .listStyle(PlainListStyle())
         }
-        .onAppear{
-            viewModel.calorieToday = viewModel.totalCaloriesToday(user: userDataManager.person)
-        }
+//        .onAppear{
+//
+//        }
         .navigationTitle("Calorie Log")
     }
     

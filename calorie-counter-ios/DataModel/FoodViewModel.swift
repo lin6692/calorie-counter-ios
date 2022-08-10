@@ -13,7 +13,6 @@ class FoodViewModel: ObservableObject {
     
     let container: NSPersistentContainer
     @Published var foods:[FoodEntity] = []
-    @Published var calorieToday:Int  = 0
     
     
     init() {
@@ -50,7 +49,6 @@ class FoodViewModel: ObservableObject {
         newFood.name = name
         newFood.calorie = Int64(exactly: calorie)!
         newFood.userEmail = user.email
-        print("added!!! \(newFood.userEmail)")
         saveFood()
     }
     
@@ -81,18 +79,18 @@ class FoodViewModel: ObservableObject {
         return caloriesToday
     }
     
-    func getRemaining(goal:Int) -> Int {
+    func getRemaining(user:Person) -> Int {
         var remaining:Int
-        remaining = goal - self.calorieToday
+        remaining = user.dailyCalorieGoal - totalCaloriesToday(user:user)
         return remaining
     }
     
-    func getProgress(goal:Int) -> [Double] {
+    func getProgress(user:Person) -> [Double] {
         var current:Double
         var remaining:Double
         
-        current = Double(self.calorieToday)/Double(goal)
-        remaining = Double(self.getRemaining(goal:goal))/Double(goal)
+        current = Double(self.totalCaloriesToday(user:user))/Double(user.dailyCalorieGoal)
+        remaining = Double(self.getRemaining(user:user))/Double(user.dailyCalorieGoal)
         
         return [current, remaining]
     }

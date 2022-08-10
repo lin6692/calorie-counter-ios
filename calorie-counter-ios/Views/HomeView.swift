@@ -45,11 +45,11 @@ struct HomeView: View {
                         Text("-").fontWeight(.bold)
                         CalorieDisplay(number: viewModel.totalCaloriesToday(user: userDataManager.person), desc: "Current")
                         Text("=").fontWeight(.bold)
-                        CalorieDisplay(number: viewModel.getRemaining(goal: userDataManager.person.dailyCalorieGoal), desc: "Remaining")
+                        CalorieDisplay(number: viewModel.getRemaining(user: userDataManager.person), desc: "Remaining")
                     }
                     
                     // Pie chart to display the percentage
-                    PieChart(data: viewModel.getProgress(goal:userDataManager.person.dailyCalorieGoal), labels: $pieChartLabel, colors: [.red, .yellow, .blue], borderColor: .white)
+                    PieChart(data: viewModel.getProgress(user:userDataManager.person), labels: $pieChartLabel, colors: [.red, .yellow, .blue], borderColor: .white)
                         .padding(40)
                         .frame(height: 380)
                     
@@ -67,6 +67,7 @@ struct HomeView: View {
                     if userDataManager.person.name == "" {
                         self.userDataManager.createNewUser()
                     }
+                    
                 }
                 .toolbar {
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
