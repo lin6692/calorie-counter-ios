@@ -7,9 +7,11 @@
 
 import SwiftUI
 
-struct Person: Identifiable {
-    var id: String
-    var email: String
-    var name: String
-    var dailyCalorieGoal: Int
+struct Person {
+    var email = "Default Email"
+    var name = "Default User"
+    var dailyCalorieGoal = 2000
+    
+    init() { }
 }
+

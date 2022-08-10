@@ -7,12 +7,13 @@
 
 import SwiftUI
 import Combine
+import Firebase
+import GoogleSignIn
 
 struct ProfileView: View {
     
-    @State var user = "Lin"
-    @State var email = "linliu6660@gmail.com"
-    @State var goal = 2000
+    @EnvironmentObject var session: SessionManager
+    @EnvironmentObject var userDatamManager:UserDataManager
     
     @State private var age = ""
     @State private var weight = ""
@@ -30,11 +31,14 @@ struct ProfileView: View {
                 
                 // Display Person Information
                 Section (header:Text("Personal Info")){
-                    ProfileDetailEntryView(text: $user, img: "person.fill")
-                    ProfileDetailEntryView(text: $email, img: "mail")
+                    if session.loggedUser != nil {
+                        ProfileDetailEntryView(text: userDatamManager.person.name, img: "person.fill")
+                        ProfileDetailEntryView(text: userDatamManager.person.email, img: "mail")
+                    }
+                    
                     HStack{
                         Image(systemName: "flame")
-                        Text("Daily Calorie Goal : \(goal) Kcal")
+                        Text("Daily Calorie Goal : \(userDatamManager.person.dailyCalorieGoal) Kcal")
                     }
                 }
                 
@@ -93,7 +97,9 @@ struct ProfileView: View {
                         })
                         
                         Button {
-                            goal = Int(calulcatedCal)!
+                            let newGoal = Int(calulcatedCal)!
+                            userDatamManager.updateUser(newCaloriesGoal: newGoal)
+                            userDatamManager.person.dailyCalorieGoal = newGoal
                         } label:{
                             ButtonTextView(label: "Update")
                         }
@@ -106,9 +112,13 @@ struct ProfileView: View {
             .navigationBarTitle(Text(""), displayMode: .inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
-                    NavigationLink(destination: LoginView(), label:{
-                        Image(systemName: "rectangle.portrait.and.arrow.right")
-                    })
+                    Button("logout") {
+                        GIDSignIn.sharedInstance.signOut()
+                        try?Auth.auth().signOut()
+                        withAnimation{
+                            session.logout()
+                        }
+                    }
                 }
             }
         }
@@ -141,7 +151,7 @@ struct ProfileView: View {
 }
 
 struct ProfileDetailEntryView: View {
-    @Binding var text:String
+    var text:String
     var img: String
     var body: some View {
         HStack{
