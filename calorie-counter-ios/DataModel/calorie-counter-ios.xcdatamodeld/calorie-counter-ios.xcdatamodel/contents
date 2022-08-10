@@ -5,8 +5,9 @@
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="userEmail" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="FoodEntity" positionX="-27" positionY="18" width="128" height="89"/>
+        <element name="FoodEntity" positionX="-27" positionY="18" width="128" height="104"/>
     </elements>
 </model>
