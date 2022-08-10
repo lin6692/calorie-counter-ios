@@ -23,6 +23,19 @@
 		1382A61428A0B70C00FAADE8 /* calorie-counter-ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1382A61228A0B70C00FAADE8 /* calorie-counter-ios.xcdatamodeld */; };
 		1382A61628A0BF4100FAADE8 /* FoodDetailAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1382A61528A0BF4100FAADE8 /* FoodDetailAPI.swift */; };
 		1382A61828A14EE600FAADE8 /* FoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1382A61728A14EE500FAADE8 /* FoodViewModel.swift */; };
+		1382A61B28A17FDC00FAADE8 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 1382A61A28A17FDC00FAADE8 /* GoogleSignIn */; };
+		1382A61D28A17FDC00FAADE8 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1382A61C28A17FDC00FAADE8 /* GoogleSignInSwift */; };
+		1382A62428A2AFBC00FAADE8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1382A62328A2AFBC00FAADE8 /* FirebaseAuth */; };
+		1382A62828A2C0FF00FAADE8 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1382A62728A2C0FF00FAADE8 /* SessionManager.swift */; };
+		1382A62B28A2F18F00FAADE8 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 1382A62A28A2F18F00FAADE8 /* FirebaseDatabase */; };
+		1382A62D28A2F18F00FAADE8 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1382A62C28A2F18F00FAADE8 /* FirebaseDatabaseSwift */; };
+		1382A63128A2F94A00FAADE8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1382A63028A2F94A00FAADE8 /* Person.swift */; };
+		1382A63328A2FCB500FAADE8 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1382A63228A2FCB500FAADE8 /* UserDataManager.swift */; };
+		1382A63628A2FF8700FAADE8 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 1382A63528A2FF8700FAADE8 /* FirebaseDatabase */; };
+		1382A63828A2FF8700FAADE8 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1382A63728A2FF8700FAADE8 /* FirebaseDatabaseSwift */; };
+		1382A63A28A2FF8700FAADE8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1382A63928A2FF8700FAADE8 /* FirebaseFirestore */; };
+		1382A63C28A2FF8700FAADE8 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1382A63B28A2FF8700FAADE8 /* FirebaseFirestoreSwift */; };
+		1382A64028A31B8600FAADE8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1382A63F28A31B8600FAADE8 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +56,11 @@
 		1382A61328A0B70C00FAADE8 /* calorie-counter-ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "calorie-counter-ios.xcdatamodel"; sourceTree = "<group>"; };
 		1382A61528A0BF4100FAADE8 /* FoodDetailAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailAPI.swift; sourceTree = "<group>"; };
 		1382A61728A14EE500FAADE8 /* FoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewModel.swift; sourceTree = "<group>"; };
+		1382A61E28A1814300FAADE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1382A62728A2C0FF00FAADE8 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		1382A63028A2F94A00FAADE8 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		1382A63228A2FCB500FAADE8 /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
+		1382A63F28A31B8600FAADE8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +68,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1382A63828A2FF8700FAADE8 /* FirebaseDatabaseSwift in Frameworks */,
+				1382A63628A2FF8700FAADE8 /* FirebaseDatabase in Frameworks */,
+				1382A62D28A2F18F00FAADE8 /* FirebaseDatabaseSwift in Frameworks */,
+				1382A61B28A17FDC00FAADE8 /* GoogleSignIn in Frameworks */,
+				1382A62428A2AFBC00FAADE8 /* FirebaseAuth in Frameworks */,
+				1382A63A28A2FF8700FAADE8 /* FirebaseFirestore in Frameworks */,
+				1382A62B28A2F18F00FAADE8 /* FirebaseDatabase in Frameworks */,
+				1382A61D28A17FDC00FAADE8 /* GoogleSignInSwift in Frameworks */,
+				1382A63C28A2FF8700FAADE8 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +102,8 @@
 		1382A5EB289D975600FAADE8 /* calorie-counter-ios */ = {
 			isa = PBXGroup;
 			children = (
+				1382A61E28A1814300FAADE8 /* Info.plist */,
+				1382A63F28A31B8600FAADE8 /* GoogleService-Info.plist */,
 				1382A60F28A0B1CA00FAADE8 /* DataModel */,
 				1382A60A289D98E200FAADE8 /* Helpers */,
 				1382A5FB289D981E00FAADE8 /* SubViews */,
@@ -122,6 +151,7 @@
 			children = (
 				1382A60B289D98F900FAADE8 /* TimeFormatting.swift */,
 				1382A61528A0BF4100FAADE8 /* FoodDetailAPI.swift */,
+				1382A62728A2C0FF00FAADE8 /* SessionManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -129,8 +159,10 @@
 		1382A60F28A0B1CA00FAADE8 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				1382A63028A2F94A00FAADE8 /* Person.swift */,
 				1382A61228A0B70C00FAADE8 /* calorie-counter-ios.xcdatamodeld */,
 				1382A61728A14EE500FAADE8 /* FoodViewModel.swift */,
+				1382A63228A2FCB500FAADE8 /* UserDataManager.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -151,6 +183,17 @@
 			dependencies = (
 			);
 			name = "calorie-counter-ios";
+			packageProductDependencies = (
+				1382A61A28A17FDC00FAADE8 /* GoogleSignIn */,
+				1382A61C28A17FDC00FAADE8 /* GoogleSignInSwift */,
+				1382A62328A2AFBC00FAADE8 /* FirebaseAuth */,
+				1382A62A28A2F18F00FAADE8 /* FirebaseDatabase */,
+				1382A62C28A2F18F00FAADE8 /* FirebaseDatabaseSwift */,
+				1382A63528A2FF8700FAADE8 /* FirebaseDatabase */,
+				1382A63728A2FF8700FAADE8 /* FirebaseDatabaseSwift */,
+				1382A63928A2FF8700FAADE8 /* FirebaseFirestore */,
+				1382A63B28A2FF8700FAADE8 /* FirebaseFirestoreSwift */,
+			);
 			productName = "calorie-counter-ios";
 			productReference = 1382A5E9289D975600FAADE8 /* calorie-counter-ios.app */;
 			productType = "com.apple.product-type.application";
@@ -179,6 +222,12 @@
 				Base,
 			);
 			mainGroup = 1382A5E0289D975600FAADE8;
+			packageReferences = (
+				1382A61928A17FDC00FAADE8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				1382A62228A2AFBC00FAADE8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				1382A62928A2F18F00FAADE8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				1382A63428A2FF8700FAADE8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 1382A5EA289D975600FAADE8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -195,6 +244,7 @@
 			files = (
 				1382A5F4289D975800FAADE8 /* Preview Assets.xcassets in Resources */,
 				1382A5F1289D975800FAADE8 /* Assets.xcassets in Resources */,
+				1382A64028A31B8600FAADE8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,12 +263,15 @@
 				1382A61828A14EE600FAADE8 /* FoodViewModel.swift in Sources */,
 				1382A5EF289D975600FAADE8 /* ContentView.swift in Sources */,
 				1382A60C289D98F900FAADE8 /* TimeFormatting.swift in Sources */,
+				1382A62828A2C0FF00FAADE8 /* SessionManager.swift in Sources */,
 				1382A61628A0BF4100FAADE8 /* FoodDetailAPI.swift in Sources */,
 				1382A601289D987600FAADE8 /* HomeView.swift in Sources */,
 				1382A603289D988500FAADE8 /* ProfileView.swift in Sources */,
 				1382A5ED289D975600FAADE8 /* calorie_counter_iosApp.swift in Sources */,
 				1382A60E28A0A32A00FAADE8 /* ButtonTextView.swift in Sources */,
+				1382A63128A2F94A00FAADE8 /* Person.swift in Sources */,
 				1382A605289D988F00FAADE8 /* AddFoodView.swift in Sources */,
+				1382A63328A2FCB500FAADE8 /* UserDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +402,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"calorie-counter-ios/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "calorie-counter-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -377,6 +431,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"calorie-counter-ios/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "calorie-counter-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -417,6 +472,89 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1382A61928A17FDC00FAADE8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		1382A62228A2AFBC00FAADE8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		1382A62928A2F18F00FAADE8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		1382A63428A2FF8700FAADE8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1382A61A28A17FDC00FAADE8 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1382A61928A17FDC00FAADE8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		1382A61C28A17FDC00FAADE8 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1382A61928A17FDC00FAADE8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		1382A62328A2AFBC00FAADE8 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1382A62228A2AFBC00FAADE8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		1382A62A28A2F18F00FAADE8 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1382A62928A2F18F00FAADE8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		1382A62C28A2F18F00FAADE8 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1382A62928A2F18F00FAADE8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		1382A63528A2FF8700FAADE8 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1382A62928A2F18F00FAADE8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		1382A63728A2FF8700FAADE8 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1382A62928A2F18F00FAADE8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		1382A63928A2FF8700FAADE8 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1382A62928A2F18F00FAADE8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		1382A63B28A2FF8700FAADE8 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1382A62928A2F18F00FAADE8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1382A61228A0B70C00FAADE8 /* calorie-counter-ios.xcdatamodeld */ = {

@@ -11,6 +11,8 @@ import CoreData
 struct FoodLogView: View {
     
     @EnvironmentObject var viewModel:FoodViewModel
+    @EnvironmentObject var userDataManager:UserDataManager
+    @EnvironmentObject var session: SessionManager
     
     var body: some View {
         VStack{
@@ -19,11 +21,16 @@ struct FoodLogView: View {
                 .padding(.horizontal)
             List {
                 ForEach(viewModel.foods) { food in
-                    FoodEntryView(food: food)
+                    if food.userEmail == userDataManager.person.email {
+                        FoodEntryView(food: food)
+                    }
                 }
                 .onDelete(perform: viewModel.deleteFood)
             }
             .listStyle(PlainListStyle())
+        }
+        .onAppear{
+            viewModel.calorieToday = viewModel.totalCaloriesToday(user: userDataManager.person)
         }
         .navigationTitle("Calorie Log")
     }
