@@ -15,23 +15,68 @@ struct LoginView: View {
 
     
     var body: some View {
-        VStack{
-            Button {
-                handleLogin()
-            } label: {
-                Text("Sign In with google")
+        
+        ZStack {
+            //            LinearGradient(
+            //                gradient: Gradient(colors: [.blue, .green]),
+            //                startPoint: .top, endPoint: .bottom)
+            
+            Color("white")
+            
+            VStack(spacing:20) {
+                Image("icon")
+                    .resizable()
+                    .frame(width: 200, height: 200)
+                    .padding(.horizontal)
+                    .offset(y:-200)
             }
-        }.overlay(ZStack{
-            if isLoading{
-                Color.black
-                    .opacity(0.25)
-                    .ignoresSafeArea()
-                ProgressView()
-                    .font(.title2)
-                    .frame(width: 60, height: 40)
+            
+            
+            VStack{
+                Button {
+                    handleLogin()
+                } label: {
+                    HStack {
+                        Spacer()
+                        Image("google")
+                            .resizable()
+                            .frame(width: 35, height: 35)
+                            .padding(.horizontal)
+                        Text("Sign in with Google")
+                            .foregroundColor(.black)
+                            .font(.title3)
+                        Spacer()
+                    }
+                    .padding()
+                    .frame(width:320)
+                    .background(Color.white)
+                    .cornerRadius(50.0)
+                    .shadow(color: Color.black.opacity(0.08), radius: 60, x: 0.0, y: 16)
+                }
+            }.overlay(ZStack{
+                if isLoading{
+                    Color.black
+                        .opacity(0.25)
+                        .ignoresSafeArea()
+                    ProgressView()
+                        .font(.title2)
+                        .frame(width: 60, height: 40)
+                }
             }
-        })
-       
+            )
+            VStack(spacing:7){
+                HStack{
+                    Text("Created by")
+                    Link("Lin Liu", destination: URL(string: "https://github.com/lin6692/calorie-counter-ios")!)
+                        .foregroundColor(Color.accentColor)
+                    Image(systemName: "heart.circle.fill")
+                }
+                Text("@ Ada Developer Academy, July 2022")
+            }
+            .offset(y:+320)
+            .padding()
+            .foregroundColor(Color.gray)
+        }.ignoresSafeArea()
     }
     
     
@@ -103,3 +148,4 @@ extension View {
         return root
     }
 }
+
