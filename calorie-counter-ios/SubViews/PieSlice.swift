@@ -55,5 +55,6 @@ struct PieSliceText: View {
       Text(description)
         .font(.body)
     }
+    .foregroundColor(.white)
   }
 }

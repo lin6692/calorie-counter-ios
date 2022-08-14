@@ -17,18 +17,20 @@ struct LoginView: View {
     var body: some View {
         
         ZStack {
-            //            LinearGradient(
-            //                gradient: Gradient(colors: [.blue, .green]),
-            //                startPoint: .top, endPoint: .bottom)
             
-            Color("white")
+            LinearGradient(colors: [.orange, .red],
+                                   startPoint: .top,
+                                   endPoint: .center)
             
             VStack(spacing:20) {
                 Image("icon")
                     .resizable()
-                    .frame(width: 200, height: 200)
+                    .frame(width: 150, height: 150)
                     .padding(.horizontal)
-                    .offset(y:-200)
+                    .clipShape(Circle())
+                    .shadow(radius: 10)
+                    .overlay(Circle().stroke(Color("white"), lineWidth: 5))
+                    .offset(y:-100)
             }
             
             
@@ -53,7 +55,9 @@ struct LoginView: View {
                     .cornerRadius(50.0)
                     .shadow(color: Color.black.opacity(0.08), radius: 60, x: 0.0, y: 16)
                 }
-            }.overlay(ZStack{
+            }
+            .offset(y:+100)
+            .overlay(ZStack{
                 if isLoading{
                     Color.black
                         .opacity(0.25)
@@ -64,18 +68,18 @@ struct LoginView: View {
                 }
             }
             )
+            
             VStack(spacing:7){
                 HStack{
                     Text("Created by")
                     Link("Lin Liu", destination: URL(string: "https://github.com/lin6692/calorie-counter-ios")!)
-                        .foregroundColor(Color.accentColor)
                     Image(systemName: "heart.circle.fill")
                 }
                 Text("@ Ada Developer Academy, July 2022")
             }
             .offset(y:+320)
             .padding()
-            .foregroundColor(Color.gray)
+            .foregroundColor(Color("white"))
         }.ignoresSafeArea()
     }
     

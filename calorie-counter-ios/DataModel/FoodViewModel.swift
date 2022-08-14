@@ -92,6 +92,11 @@ class FoodViewModel: ObservableObject {
         current = Double(self.totalCaloriesToday(user:user))/Double(user.dailyCalorieGoal)
         remaining = Double(self.getRemaining(user:user))/Double(user.dailyCalorieGoal)
         
-        return [current, remaining]
+        if current >= 1.0 {
+            return [1.0, 0.0]
+        } else {
+            return [current, remaining]
+        }
+
     }
 }

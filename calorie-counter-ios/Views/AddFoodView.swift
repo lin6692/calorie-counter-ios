@@ -106,6 +106,7 @@ struct AddFoodView: View {
         measureIndex = 0
         servingAmount = 1
         foodOptions = []
+        foodName = ""
     }
     
     private func getTotalCalIntake() -> Int{
