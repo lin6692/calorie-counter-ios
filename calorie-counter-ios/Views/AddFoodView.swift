@@ -20,6 +20,7 @@ struct AddFoodView: View {
     @State private var foodOptions: [FoodOption] = []
     
     @State private var showingEmptySearchAlert = false
+    @State private var showingSuccessAdded = false
     
     var body: some View {
         VStack {
@@ -86,12 +87,15 @@ struct AddFoodView: View {
                         Spacer()
                         Button {
                             viewModel.addFood(name: foodName, calorie: getTotalCalIntake(), user:userDatamManager.person)
-//                            addFood(name:foodName, calorie: getTotalCalIntake())
                             clearInput()
+                            showingSuccessAdded.toggle()
                         } label: {
                             ButtonTextView(label: "Add")
                         }
                         .buttonStyle(BorderlessButtonStyle())
+                        .alert(isPresented: $showingSuccessAdded, content:{
+                            Alert(title: Text("Added!"))
+                        })
                         Spacer()
                     }
                 }

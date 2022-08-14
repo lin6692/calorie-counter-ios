@@ -42,12 +42,11 @@ struct HomeView: View {
                     .padding()
                     .offset(y:-300)
                     
-                    
-                    if viewModel.totalCaloriesToday(user: userDataManager.person) >= userDataManager.person.dailyCalorieGoal {
+                    if viewModel.getRemaining(user: userDataManager.person) <= 0 {
                         meetGoalView(person: userDataManager.person, viewModel: viewModel)
                     } else {
                         // Display Current Kcal Details
-                        goalView(userDataManager: userDataManager, viewModel: viewModel, pieChartLabel: $pieChartLabel)
+                        goalView(viewModel: viewModel, pieChartLabel: $pieChartLabel, person: $userDataManager.person)
                     }
                     
                     NavigationLink(destination: FoodLogView(), label:{
@@ -108,23 +107,23 @@ struct CalorieDisplay: View {
 }
 
 struct goalView: View {
-    var userDataManager: UserDataManager
     var viewModel: FoodViewModel
     @Binding var pieChartLabel: [String]
+    @Binding var person: Person
     
     var body: some View {
         
         // equation
         HStack {
-            CalorieDisplay(number: userDataManager.person.dailyCalorieGoal, desc: "Goal",color:.black)
+            CalorieDisplay(number: person.dailyCalorieGoal, desc: "Goal",color:.black)
             Text("-").fontWeight(.bold)
-            CalorieDisplay(number: viewModel.totalCaloriesToday(user: userDataManager.person), desc: "Current", color:Color("pie-red"))
+            CalorieDisplay(number: viewModel.totalCaloriesToday(user: person), desc: "Current", color:Color("pie-red"))
             Text("=").fontWeight(.bold)
-            CalorieDisplay(number: viewModel.getRemaining(user: userDataManager.person), desc: "Remaining", color:Color("pie-blue"))
+            CalorieDisplay(number: viewModel.getRemaining(user: person), desc: "Remaining", color:Color("pie-blue"))
         }.offset(y:-170)
 
         // Pie chart to display the percentage
-        PieChart(data: viewModel.getProgress(user:userDataManager.person), labels: $pieChartLabel, colors: [Color("pie-red"), Color("pie-blue"), .blue], borderColor: .white)
+        PieChart(data: viewModel.getProgress(user:person), labels: $pieChartLabel, colors: [Color("pie-red"), Color("pie-blue"), .blue], borderColor: .white)
             .padding(40)
             .frame(height: 380)
             .offset(y:+50)

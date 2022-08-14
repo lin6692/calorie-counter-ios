@@ -112,7 +112,7 @@ struct ProfileView: View {
             .navigationBarTitle(Text(""), displayMode: .inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("logout") {
+                    Button("Logout") {
                         GIDSignIn.sharedInstance.signOut()
                         try?Auth.auth().signOut()
                         withAnimation{
