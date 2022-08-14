@@ -30,6 +30,7 @@ struct AddFoodView: View {
                     HStack(alignment: .center, spacing:20){
                         Spacer()
                         Button {
+                            // show alert if empty input
                             if searchTerm == "" {
                                 showingEmptySearchAlert.toggle()
                             } else {
@@ -104,7 +105,6 @@ struct AddFoodView: View {
         }
     }
     
-    // **************How to reset state and binding variable?
     private func clearInput() {
         searchTerm = ""
         measureIndex = 0
@@ -113,6 +113,7 @@ struct AddFoodView: View {
         foodName = ""
     }
     
+    // get total cal per entry
     private func getTotalCalIntake() -> Int{
         var totalCalIntake = 0
         if foodOptions != [] {

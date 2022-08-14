@@ -13,7 +13,7 @@ import GoogleSignIn
 struct ProfileView: View {
     
     @EnvironmentObject var session: SessionManager
-    @EnvironmentObject var userDatamManager:UserDataManager
+    @EnvironmentObject var userDataManager:UserDataManager
     
     @State private var age = ""
     @State private var weight = ""
@@ -32,13 +32,13 @@ struct ProfileView: View {
                 // Display Person Information
                 Section (header:Text("Personal Info")){
                     if session.loggedUser != nil {
-                        ProfileDetailEntryView(text: userDatamManager.person.name, img: "person.fill")
-                        ProfileDetailEntryView(text: userDatamManager.person.email, img: "mail")
+                        ProfileDetailEntryView(text: userDataManager.person.name, img: "person.fill")
+                        ProfileDetailEntryView(text: userDataManager.person.email, img: "mail")
                     }
                     
                     HStack{
                         Image(systemName: "flame")
-                        Text("Daily Calorie Goal : \(userDatamManager.person.dailyCalorieGoal) Kcal")
+                        Text("Daily Calorie Goal : \(userDataManager.person.dailyCalorieGoal) Kcal")
                     }
                 }
                 
@@ -79,7 +79,6 @@ struct ProfileView: View {
                     }
                     
                     // get and update button
-                    // **************** "UPDATE" function *********************
                     HStack (alignment: .center, spacing:20) {
                         Spacer()
                         Button {
@@ -97,9 +96,10 @@ struct ProfileView: View {
                         })
                         
                         Button {
+                            // update the new goal
                             let newGoal = Int(calulcatedCal)!
-                            userDatamManager.updateUser(newCaloriesGoal: newGoal)
-                            userDatamManager.person.dailyCalorieGoal = newGoal
+                            userDataManager.updateUser(newCaloriesGoal: newGoal)
+                            userDataManager.person.dailyCalorieGoal = newGoal
                         } label:{
                             ButtonTextView(label: "Update")
                         }

@@ -15,6 +15,7 @@ struct FoodLogView: View {
     @EnvironmentObject var session: SessionManager
     
     var body: some View {
+        // display all food entry for current logged in user
         VStack{
             Text("\(viewModel.totalCaloriesToday(user:userDataManager.person)) Kcal (Today)")
                 .foregroundColor(.gray)
@@ -29,9 +30,6 @@ struct FoodLogView: View {
             }
             .listStyle(PlainListStyle())
         }
-//        .onAppear{
-//
-//        }
         .navigationTitle("Calorie Log")
     }
     

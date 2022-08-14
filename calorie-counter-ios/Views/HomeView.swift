@@ -42,6 +42,7 @@ struct HomeView: View {
                     .padding()
                     .offset(y:-300)
                     
+                    // check if user meet the goal
                     if viewModel.getRemaining(user: userDataManager.person) <= 0 {
                         meetGoalView(person: userDataManager.person, viewModel: viewModel)
                     } else {
@@ -153,6 +154,5 @@ struct meetGoalView: View{
                 
             }
         }
-        
     }
 }

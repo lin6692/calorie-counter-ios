@@ -18,27 +18,17 @@ struct LoginView: View {
         
         ZStack {
             
+            // set background image
             LinearGradient(colors: [.blue, .pink],
                                    startPoint: .top,
                                    endPoint: .center)
-            
-//            VStack(spacing:20) {
-//                Image("icon")
-//                    .resizable()
-//                    .frame(width: 150, height: 150)
-//                    .padding(.horizontal)
-//                    .clipShape(Circle())
-//                    .shadow(radius: 10)
-//                    .overlay(Circle().stroke(Color("white"), lineWidth: 5))
-//                    .offset(y:-100)
-//            }
-            
             
             Text("iCalories")
                 .font(.system(size: 50, weight: .bold, design: .rounded))
                 .foregroundColor(.white)
                 .offset(y:-200)
             
+            // set google sign in button
             VStack{
                 Button {
                     handleLogin()
@@ -61,18 +51,20 @@ struct LoginView: View {
                     .shadow(color: Color.black.opacity(0.08), radius: 60, x: 0.0, y: 16)
                 }
             }
+            // set loading view
             .overlay(ZStack{
                 if isLoading{
                     Color.black
-                        .opacity(0.25)
+                        .opacity(0.1)
                         .ignoresSafeArea()
                     ProgressView()
                         .font(.title2)
                         .frame(width: 60, height: 40)
                 }
-            }
+            }.cornerRadius(50.0)
             )
             
+            // footer
             VStack(spacing:7){
                 HStack{
                     Text("Created by")
