@@ -18,21 +18,26 @@ struct LoginView: View {
         
         ZStack {
             
-            LinearGradient(colors: [.orange, .red],
+            LinearGradient(colors: [.blue, .pink],
                                    startPoint: .top,
                                    endPoint: .center)
             
-            VStack(spacing:20) {
-                Image("icon")
-                    .resizable()
-                    .frame(width: 150, height: 150)
-                    .padding(.horizontal)
-                    .clipShape(Circle())
-                    .shadow(radius: 10)
-                    .overlay(Circle().stroke(Color("white"), lineWidth: 5))
-                    .offset(y:-100)
-            }
+//            VStack(spacing:20) {
+//                Image("icon")
+//                    .resizable()
+//                    .frame(width: 150, height: 150)
+//                    .padding(.horizontal)
+//                    .clipShape(Circle())
+//                    .shadow(radius: 10)
+//                    .overlay(Circle().stroke(Color("white"), lineWidth: 5))
+//                    .offset(y:-100)
+//            }
             
+            
+            Text("iCalories")
+                .font(.system(size: 50, weight: .bold, design: .rounded))
+                .foregroundColor(.white)
+                .offset(y:-200)
             
             VStack{
                 Button {
@@ -51,12 +56,11 @@ struct LoginView: View {
                     }
                     .padding()
                     .frame(width:320)
-                    .background(Color.white)
+                    .background(.white)
                     .cornerRadius(50.0)
                     .shadow(color: Color.black.opacity(0.08), radius: 60, x: 0.0, y: 16)
                 }
             }
-            .offset(y:+100)
             .overlay(ZStack{
                 if isLoading{
                     Color.black
