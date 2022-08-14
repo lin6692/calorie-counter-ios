@@ -17,7 +17,7 @@ struct AddFoodView: View {
     @State private var servingAmount = 1
     
     @State private var foodName: String = ""
-    @State private var foodOptions: [FoodOption] = []
+    @State private var foodOptions: [FoodOption] = [FoodOption(name:"Default", measure:"Default", weight:1, calories:1)]
     
     @State private var showingEmptySearchAlert = false
     @State private var showingSuccessAdded = false
@@ -59,7 +59,9 @@ struct AddFoodView: View {
                     
                 }
                 Section (header:Text("Search Result"))  {
-                    Text("\(foodName)")
+                    
+                    TextField("Food Name...", text:$foodName)
+
                     Picker("Measurements", selection: $measureIndex) {
                         ForEach(0..<foodOptions.count, id: \.self) {
                             Text(" \(foodOptions[$0].measure), \(foodOptions[$0].weight) g, \(foodOptions[$0].calories) Kcal").tag($0)
@@ -109,7 +111,7 @@ struct AddFoodView: View {
         searchTerm = ""
         measureIndex = 0
         servingAmount = 1
-        foodOptions = []
+        foodOptions = [FoodOption(name:"Default", measure:"Default", weight:1, calories:1)]
         foodName = ""
     }
     
@@ -147,6 +149,7 @@ struct FoodOption: Identifiable, Hashable {
     let measure:String
     let weight:Int
     var calories:Int
+    
 }
 
 struct AddFoodView_Previews: PreviewProvider {
