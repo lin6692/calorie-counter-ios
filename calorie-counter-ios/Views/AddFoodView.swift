@@ -10,7 +10,7 @@ import SwiftUI
 struct AddFoodView: View {
     
     @EnvironmentObject var viewModel:FoodViewModel
-    @EnvironmentObject var userDatamManager:UserDataManager
+    @EnvironmentObject var userDataManager:UserDataManager
     
     @State private var searchTerm = ""
     @State private var measureIndex = 0
@@ -89,7 +89,7 @@ struct AddFoodView: View {
                     HStack {
                         Spacer()
                         Button {
-                            viewModel.addFood(name: foodName, calorie: getTotalCalIntake(), user:userDatamManager.person)
+                            viewModel.addFood(name: foodOptions[measureIndex].name, calorie: getTotalCalIntake(), user:userDataManager.person)
                             clearInput()
                             showingSuccessAdded.toggle()
                         } label: {
