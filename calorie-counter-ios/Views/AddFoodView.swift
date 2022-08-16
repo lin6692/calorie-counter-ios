@@ -89,7 +89,7 @@ struct AddFoodView: View {
                     HStack {
                         Spacer()
                         Button {
-                            viewModel.addFood(name: foodOptions[measureIndex].name, calorie: getTotalCalIntake(), user:userDataManager.person)
+                            viewModel.addFood(name: foodName, calorie: getTotalCalIntake(), user:userDataManager.person)
                             clearInput()
                             showingSuccessAdded.toggle()
                         } label: {

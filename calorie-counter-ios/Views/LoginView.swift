@@ -64,7 +64,6 @@ struct LoginView: View {
             }.cornerRadius(50.0)
             )
             
-            // footer
             VStack(spacing:7){
                 HStack{
                     Text("Created by")
